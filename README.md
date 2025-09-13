@@ -1,16 +1,129 @@
-## Hi there 👋
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulaire de financement — Mondilive</title>
+  <style>
+    body{font-family:Arial, sans-serif;background:#f6f7fb;margin:0;padding:24px;color:#111}
+    .container{max-width:880px;margin:0 auto}
+    .card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 6px 18px rgba(16,24,40,0.06);text-align:left}
+    .logo{text-align:center;margin-bottom:20px}
+    .logo img{max-height:80px}
+    h1{margin:0 0 12px;font-size:22px;text-align:center}
+    p{margin:0 0 18px;color:#444;text-align:center}
+    .project-info{text-align:center;margin-bottom:20px;font-size:14px;color:#333}
+    form .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}
+    label{display:block;font-size:14px;margin-bottom:6px}
+    input, select, textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:14px}
+    textarea{min-height:100px;resize:vertical}
+    .full{grid-column:1/-1}
+    .actions{text-align:center;margin-top:16px}
+    button{background:#0b6ef6;color:#fff;padding:10px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:bold}
+    button:hover{background:#0956c5}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <img src="https://via.placeholder.com/200x80?text=Mondilive+Logo" alt="Logo Mondilive">
+      </div>
+      <h1>Demande de financement — Mondilive</h1>
+      <div class="project-info">
+        <p><strong>Durée du projet :</strong> 7 ans</p>
+        <p><strong>Siège :</strong> Bénin & États-Unis</p>
+        <p><strong>Email :</strong> <a href="mailto:mondilive000@gmail.com">mondilive000@gmail.com</a></p>
+      </div>
+      <p>Veuillez remplir ce formulaire pour soumettre votre demande d'appui financier.</p>
 
-<!--
-**Mondilive/Mondilive** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+      <form>
+        <div class="grid">
+          <!-- 1. Informations personnelles -->
+          <div>
+            <label for="fullname">Nom & prénom *</label>
+            <input id="fullname" name="fullname" type="text" required>
+          </div>
 
-Here are some ideas to get you started:
+          <div>
+            <label for="phone">Téléphone *</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+          <div class="full">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email">
+          </div>
+
+          <!-- 2. Informations sur l'entreprise -->
+          <div>
+            <label for="businessName">Nom de l'entreprise / commerce *</label>
+            <input id="businessName" name="businessName" type="text" required>
+          </div>
+
+          <div>
+            <label for="sector">Secteur d'activité *</label>
+            <input id="sector" name="sector" type="text" required>
+          </div>
+
+          <!-- 3. Besoins financiers -->
+          <div>
+            <label for="amount">Montant demandé (FCFA) *</label>
+            <input id="amount" name="amount" type="number" required>
+          </div>
+
+          <div class="full">
+            <label for="purpose">Objectif du financement *</label>
+            <textarea id="purpose" name="purpose" placeholder="Expliquez comment vous utiliserez le financement" required></textarea>
+          </div>
+
+          <!-- 4. Localisation -->
+          <div>
+            <label for="country">Pays de provenance *</label>
+            <input id="country" name="country" type="text" required>
+          </div>
+
+          <div>
+            <label for="region">Région *</label>
+            <input id="region" name="region" type="text" required>
+          </div>
+
+          <div>
+            <label for="city">Ville *</label>
+            <input id="city" name="city" type="text" required>
+          </div>
+
+          <!-- 5. Moyen de réception -->
+          <div class="full">
+            <label for="paymentMethod">Moyen de réception du financement *</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+              <option value="">-- Choisir --</option>
+              <option value="mobile">Mobile Money</option>
+              <option value="bank">Virement bancaire</option>
+              <option value="cash">Espèces</option>
+            </select>
+          </div>
+
+          <!-- 6. Autres besoins -->
+          <div class="full">
+            <label for="otherNeeds">Autres besoins (casse, équipement, etc.)</label>
+            <textarea id="otherNeeds" name="otherNeeds"></textarea>
+          </div>
+
+          <!-- 7. Acceptation des conditions -->
+          <div class="full">
+            <label>
+              <input type="checkbox" name="consent" required>
+              J’accepte que mes informations soient utilisées dans le cadre du projet Mondilive. *
+            </label>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Envoyer la demande</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
